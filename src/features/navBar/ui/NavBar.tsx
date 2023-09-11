@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import SVGCard from "../../assets/svg/SVGCard";
-import SVGHeart from "../../assets/svg/SVGHeart";
-import SVGLogo from "../../assets/svg/SVGLogo";
-import Search from "./Search";
+import SVGCard from "../../../assets/svg/SVGCard";
+import SVGHeart from "../../../assets/svg/SVGHeart";
+import SVGLogo from "../../../assets/svg/SVGLogo";
+import Search from "../../search/ui/Search";
+import { LinkNameRout } from "../consts";
 const NavBar = () => {
   return (
     <Container>
@@ -11,11 +12,9 @@ const NavBar = () => {
         <SVGLogo />
       </Logo>
       <Menu>
-        <Link color="#424551">Women</Link>
-        <Link color="#424551">Men</Link>
-        <Link color="#424551">Girls</Link>
-        <Link color="#424551">Boys</Link>
-        <Link color="#FF4242">Sale</Link>
+        {LinkNameRout.map((el) => (
+          <Link key={el.id} color={el.color}>{el.title}</Link>
+        ))}
       </Menu>
       <Search />
       <Static>
@@ -52,6 +51,7 @@ const Logo = styled.div`
 const Menu = styled.div`
   display: flex;
   gap: 40px;
+  font-weight: 400;
   
 `;
 
@@ -61,7 +61,7 @@ const Link = styled.p`
   font-family: Lato;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 160%;
   transform: translateY(30%);
 `;

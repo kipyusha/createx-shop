@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SVGSearch from "../../assets/svg/SVGSearch";
+import SVGSearch from "../../../assets/svg/SVGSearch";
 const Search = () => {
   return (
     <Container>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Footer from '../../widgets/footer/Footer'
-import Header from '../../widgets/header/Header'
+import Header from '../../widgets/header/ui/Header'
 
 const HomePage = () => {
   return (

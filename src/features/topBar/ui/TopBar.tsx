@@ -1,9 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
-import DownChevron from "../../assets/svg/DownChevron";
-import SVGFlagUSA from "../../assets/svg/SVGFlagUSA";
+import DownChevron from "../../../assets/svg/DownChevron";
+import SVGFlagUSA from "../../../assets/svg/SVGFlagUSA";
+import { LinkNameRout } from "../consts";
+
 
 const TopBar = () => {
+  
   return (
     <Container>
       <Wrapper>
@@ -11,10 +14,9 @@ const TopBar = () => {
           Available 24/7 at <b>(405) 555-0128</b>
         </Text>
         <Menu>
-          <Link>Delivery & returns</Link>
-          <Link>Track order</Link>
-          <Link>Blog</Link>
-          <Link>Contacts</Link>
+          {LinkNameRout.map((el) => (
+            <Link key={el.id}>{el.title}</Link>
+          ))}
         </Menu>
         <Wrap>
           <LangCurrency>
@@ -61,6 +63,7 @@ const Menu = styled.div`
 const Link = styled.a`
   text-decoration: none;
   padding: 0 16px;
+  font-weight: 400;
 `;
 
 const LangCurrency = styled.div`
@@ -76,3 +79,4 @@ const Wrap = styled.div`
   display: flex;
   gap: 60px;
 `;
+
