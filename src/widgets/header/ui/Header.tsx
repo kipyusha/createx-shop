@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Carousel from '../../carousel/Carousel'
 import NavBar from '../../../features/navBar/ui/NavBar'
 import TopBar from '../../../features/topBar/ui/TopBar'
 
@@ -9,7 +8,7 @@ const Header = () => {
     <Container>
         <TopBar/>
         <NavBar/>
-        <Carousel/>
+        
     </Container>
   )
 }

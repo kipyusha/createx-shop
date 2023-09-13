@@ -51,7 +51,7 @@ const Logo = styled.div`
 const Menu = styled.div`
   display: flex;
   gap: 40px;
-  font-weight: 400;
+  font-weight: 800;
   
 `;
 
@@ -61,7 +61,7 @@ const Link = styled.p`
   font-family: Lato;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  
   line-height: 160%;
   transform: translateY(30%);
 `;
@@ -119,6 +119,6 @@ const Checks = styled.div`
   font-family: Lato;
   font-size: 12px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 150%;
 `;

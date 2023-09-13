@@ -34,8 +34,10 @@ const TopBar = () => {
 export default TopBar;
 
 const Container = styled.div`
+
   width: 100%;
   height: 45px;
+ margin-top: 0;
   background: rgba(30, 33, 44, 1);
   font-size: 14px;
   font-weight: 400;
