@@ -1,29 +1,26 @@
+import React from "react";
 import { ESliderArrow } from "../../SliderArrow/enums/enums";
 import { SliderArrow } from "../../SliderArrow/ui/SliderArrow";
 import { TSliderSimpleProps } from "../type/types";
 
 export const SLIDER_SIMPLE_SETTINGS = (props: TSliderSimpleProps) => {
+  
   const {
     arrows = false,
-    className,
-    fade = false,
     nextArrow,
     prevArrow,
-    slidesToScroll = 1,
     slidesToShow = 1,
-    speed = 500,
-    swipeToSlide = false,
+    swipe = false,
   } = props;
+
   return {
     settings: {
       arrows,
-      className,
       dots: true,
-      swipe: false,
-      fade,
+      swipe,
       autoplay: true,
       autoplaySpeed: 3000,
-      infinite: true,
+      infinite: false,
       nextArrow: arrows ? (
         <SliderArrow styles={{right: "5px"}} type={ESliderArrow.Next}/>
       ) : (
@@ -34,12 +31,16 @@ export const SLIDER_SIMPLE_SETTINGS = (props: TSliderSimpleProps) => {
       ) : (
         prevArrow
       ),
-      slidesToScroll,
       slidesToShow,
-      speed,
-      swipeToSlide,
+      speed: 500,
+      
     },
+  
   };
-};
+}
+
+
+
+
 
 

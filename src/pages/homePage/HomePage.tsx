@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Carousel from '../../features/carousel'
+import Category from '../../widgets/category'
 import Footer from '../../widgets/footer/Footer'
 import Header from '../../widgets/header/ui/Header'
-import SliderPage from '../sliderPage/SliderPage'
+
+import SliderMain from '../../widgets/sliderMain'
+import SliderProductMain from '../../widgets/sliderProduct/ui/SliderProductMain'
 
 
 const HomePage = () => {
@@ -11,9 +14,9 @@ const HomePage = () => {
     <Container>
         <Header/>
         <Carousel/>
-        <SliderPage/>
-        
-        
+        <SliderMain/>
+        <Category/>
+        <SliderProductMain/>
         <Footer/>
     </Container>
   )
@@ -24,8 +27,8 @@ export default HomePage
 const Container = styled.div`
   max-width: 1980px;
   width: 100%;
-  min-height: 100vh;
-  height: max-content;
+  
+  height: 3000px;
   
   
 `

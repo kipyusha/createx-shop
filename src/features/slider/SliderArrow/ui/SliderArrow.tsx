@@ -17,7 +17,7 @@ type IProps = {
   style?: CSSProperties;
   styles?: CSSProperties;
   type?: ESliderArrow;
-};
+};  
 
 export const SliderArrow: FC<IProps> = ({
   backgroundColor = "#FFF",
