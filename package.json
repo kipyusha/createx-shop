@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@smastrom/react-rating": "^1.3.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -11,12 +12,24 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-slick": "^0.23.10",
+    "@types/react-star-rating-component": "^1.4.1",
+    "@types/swiper": "^6.0.0",
     "axios": "^1.5.0",
+    "clsx": "^2.0.0",
+    "lodash-node": "^3.10.2",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive": "^9.0.2",
     "react-scripts": "5.0.1",
+    "react-simple-star-rating": "^5.1.7",
+    "react-slick": "^0.29.0",
     "redux-persist-filesystem-storage": "^4.2.0",
+    "slick-carousel": "^1.8.1",
+    "slider": "^1.0.4",
     "styled-components": "^6.0.7",
+    "swiper": "^10.2.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -43,5 +56,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.198"
   }
 }
