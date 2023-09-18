@@ -63,13 +63,13 @@ const StyledSlider = styled(Slider)`
     justify-content: center;
     margin: 0 5px;
     width: 160px;
-    cursor: pointer;
+    cursor: default;
   }
 
   &.slick-slider .slick-dots li button {
     position: relative;
     color: #424551;
-
+    
     font-family: Ubuntu;
     font-size: 28px;
     font-style: normal;
@@ -78,9 +78,11 @@ const StyledSlider = styled(Slider)`
     top: -50px;
     background-color: none;
     opacity: 0.6;
+    cursor: default;
   }
   &.slick-slider .slick-dots li button::before {
     position: absolute;
+    cursor: default;
     top: 50px;
     width: 160px;
     height: 2px;
@@ -89,7 +91,7 @@ const StyledSlider = styled(Slider)`
     opacity: 0.3;
   }
   &.slick-slider .slick-dots li button:hover {
-    background-color: #b9b5b5;
+    
   }
   &.slick-slider .slick-dots li.slick-active button {
     background-color: none;

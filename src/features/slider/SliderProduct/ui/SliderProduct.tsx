@@ -5,72 +5,63 @@ import { SLIDER_SIMPLE_SETTINGS } from "../../SliderSimple/config/settings";
 import isNil from "lodash/isNil";
 import { useMediaQuery } from "react-responsive";
 import { clsx } from "clsx";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import SVGHeart from "../../../../assets/svg/SVGHeart";
-import {sliderProductImages} from "../../../../widgets/sliderProduct/consts/data"
+import { sliderProductImages } from "../../../../widgets/sliderProduct/consts/data";
 import RatingComponents from "../../../rating/RatingComponents";
-
 
 const SliderProduct: FC<TSliderProductProps> = (props) => {
   const settings = SLIDER_SIMPLE_SETTINGS(props).settings;
   const isMobileScreen = useMediaQuery({ query: "(max-width: 320px)" });
-  
-  return  (
+
+  return (
     <StyledSliderProduct {...settings}>
-      
-      { !isNil(sliderProductImages) &&
+      {!isNil(sliderProductImages) &&
         sliderProductImages.map((el) => {
           return (
-            
             <div className="SliderSimple-Item" key={el.id}>
               <Wrap>
                 <img
-                  alt=''
+                  alt=""
                   className={clsx("SliderSimple-Image", {
-                    "SliderSimple-Image__mobile" : isMobileScreen,
+                    "SliderSimple-Image__mobile": isMobileScreen,
                   })}
-                  
                   src={el.images}
-                  
-                  
                 />
                 <WrapRating>
-                  <RatingComponents/>
+                  <RatingComponents />
                 </WrapRating>
-                <Favorites><SVGHeart/></Favorites>
+                <Favorites>
+                  <SVGHeart />
+                </Favorites>
               </Wrap>
-              
+
               <Title>{el.title}</Title>
               <Price>${el.price}</Price>
-              
             </div>
           );
         })}
-        
     </StyledSliderProduct>
-    ) 
+  );
 };
 
-
-
 export default SliderProduct;
-
 
 const Wrap = styled.div`
   position: relative;
   width: 285px;
   height: 320px;
-`
+`;
 const WrapRating = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
-`
+`;
 const StyledSliderProduct = styled(Slider)`
   margin: 0 30px;
-&.slick-slide img {
+  &.slick-slide img {
     width: 100%;
     max-width: 1980px;
     height: 100%;
@@ -79,16 +70,12 @@ const StyledSliderProduct = styled(Slider)`
     outline: transparent;
   }
   &.slick-slider {
-    
     margin-bottom: 30px;
   }
   &.slick-slider .slick-dots {
-    
     display: flex !important;
     justify-content: center;
     bottom: -80px;
-    
-    
   }
   &.slick-slider .slick-dots li {
     display: flex;
@@ -97,10 +84,8 @@ const StyledSliderProduct = styled(Slider)`
     margin: 0 5px;
     width: 30px;
     cursor: pointer;
-    
-    
   }
-  
+
   &.slick-slider .slick-dots li button {
     position: relative;
     color: transparent;
@@ -114,7 +99,6 @@ const StyledSliderProduct = styled(Slider)`
     top: -50px;
     background-color: none;
     opacity: 0.6;
-    
   }
   &.slick-slider .slick-dots li button::before {
     position: absolute;
@@ -124,17 +108,13 @@ const StyledSliderProduct = styled(Slider)`
     background-color: #424551;
     font-size: 0;
     opacity: 0.3;
-    
   }
   &.slick-slider .slick-dots li button:hover {
-    
   }
   &.slick-slider .slick-dots li.slick-active button {
     background-color: none;
     opacity: 1;
     outline: transparent;
-   
-   
   }
   &.slick-slider .slick-dots li.slick-active button:before {
     width: 30px;
@@ -148,26 +128,24 @@ const StyledSliderProduct = styled(Slider)`
   .slick-slider .slick-list {
     touch-action: pan-y;
   }
-  &.slick-prev:before
-  .slick-next:before {
+  &.slick-prev:before .slick-next:before {
     opacity: 0 !important;
     display: none !important;
   }
- 
+
   .Slider {
     &-Arrow {
       position: absolute !important;
       top: 50% !important;
       z-index: 1 !important;
-      
-  
+
       &.slick-disabled {
         .Slider-ArrowButton {
           // display: none;
         }
       }
     }
-  
+
     &-ArrowButton {
       display: flex;
       justify-content: center;
@@ -179,28 +157,28 @@ const StyledSliderProduct = styled(Slider)`
       width: 48px;
       height: 48px;
       background-color: var(--slider-arrow-backgroundColor);
-      
+
       border-radius: 50%;
       cursor: pointer;
       opacity: var(--slider-arrow-opacity);
       transition: all 500ms ease;
-  
+
       &__left {
         left: 45px;
       }
-  
+
       &__right {
         right: 45px;
         transform: rotate(180deg);
       }
-  
+
       &:hover {
         background-color: rgb(218, 219, 228);
-        
+
         opacity: 0.8;
       }
     }
-  
+
     &-ArrowCustom {
       svg {
         fill: red;
@@ -211,10 +189,10 @@ const StyledSliderProduct = styled(Slider)`
   }
   &.slick-prev .slick-next {
     display: none;
-  }`;
+  }
+`;
 
-
-const Favorites = styled.div` 
+const Favorites = styled.div`
   position: absolute;
   width: 32px;
   height: 32px;
@@ -227,22 +205,21 @@ const Favorites = styled.div`
     height: 16px;
     padding: 8px;
   }
-  
-`
+`;
 
-const Title = styled.h1` 
+const Title = styled.h1`
   color: #424551;
   font-family: Lato;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; 
+  line-height: 150%;
   margin: 16px 0 8px;
   padding: 0 16px;
-`
+`;
 
-const Price = styled.h5` 
-  color:#1E212C;
+const Price = styled.h5`
+  color: #1e212c;
   font-family: Lato;
   font-size: 20px;
   font-style: normal;
@@ -250,4 +227,4 @@ const Price = styled.h5`
   line-height: 130%;
   margin: 0;
   padding: 0 16px;
-`
+`;
