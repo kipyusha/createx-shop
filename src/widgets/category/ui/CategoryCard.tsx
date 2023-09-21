@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { CategoryImages } from "../consts";
+import { CATEGORY_IMAGES } from "../consts";
 
 const CategoryCard = () => {
   return (
     <Container>
-      {CategoryImages.map((el) => (
+      {CATEGORY_IMAGES.map((el) => (
         <WrapCard key={el.id}>
           <ImgCategory src={el.images} alt="" />
           <NameCategory>{el.title}</NameCategory>

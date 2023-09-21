@@ -5,7 +5,7 @@ import { TCategorySimpleProps } from '../types/inteface'
 
 
 
-export const CategoryImages: TCategorySimpleProps[] = [
+export const CATEGORY_IMAGES: TCategorySimpleProps[] = [
     {id: 1, title: 'Women’s', images: women},
     {id: 2, title: 'Men’s', images: man},
     {id: 3, title: 'Kids’', images: kid},

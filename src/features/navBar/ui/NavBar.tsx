@@ -4,7 +4,7 @@ import SVGCard from "../../../assets/svg/SVGCard";
 import SVGHeart from "../../../assets/svg/SVGHeart";
 import SVGLogo from "../../../assets/svg/SVGLogo";
 import Search from "../../search/ui/Search";
-import { LinkNameRout } from "../consts";
+import { LINK_NAME_ROUT } from "../consts";
 const NavBar = () => {
   return (
     <Container>
@@ -12,7 +12,7 @@ const NavBar = () => {
         <SVGLogo />
       </Logo>
       <Menu>
-        {LinkNameRout.map((el) => (
+        {LINK_NAME_ROUT.map((el) => (
           <Link key={el.id} color={el.color}>{el.title}</Link>
         ))}
       </Menu>

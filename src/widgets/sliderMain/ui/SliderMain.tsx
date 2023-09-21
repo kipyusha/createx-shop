@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import SliderSimple from "../../../features/slider/SliderSimple/ui/SliderSimple";
-import { sliderImages } from "../consts/data";
+import { SLIDER_IMAGES } from "../consts/data";
 
 const SliderMain = () => {
   return (
     <Container>
-      <SliderSimple images={sliderImages} arrows={true} />
+      <SliderSimple arrows={true} images={SLIDER_IMAGES}/>
       <TitleTop>New collection</TitleTop>
       <TitleSeason>Menswear 2020</TitleSeason>
     </Container>

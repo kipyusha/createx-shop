@@ -1,5 +1,5 @@
 import { INavBar } from './../type/interface';
-export const LinkNameRout: INavBar[]  = 
+export const LINK_NAME_ROUT: INavBar[]  = 
     [
         {id: 1, title: 'Women', color: '#424551', rout: ''},
         {id: 2, title: 'Men', color: '#424551', rout: ''},

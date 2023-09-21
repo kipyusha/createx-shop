@@ -4,7 +4,7 @@ import SliderProduct from "../../../features/slider/SliderProduct/ui/SliderProdu
 
 const SliderProductMain = () => {
   return (
-    <div>
+    <Container>
       <TitleBlockText>
         <TitleNew>New arrivals</TitleNew>
         <Description>
@@ -14,11 +14,18 @@ const SliderProductMain = () => {
       </TitleBlockText>
 
       <SliderProduct dots={true} slidesToShow={6} swipe={true} />
-    </div>
+    </Container>
   );
 };
 
 export default SliderProductMain;
+
+const Container = styled.div`
+  width: 100%;
+  max-width: 1860px;
+  height: 690px;
+  margin: 0 30px;
+`
 
 const TitleBlockText = styled.div`
   text-align: center;
