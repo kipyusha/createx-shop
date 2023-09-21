@@ -42,6 +42,12 @@ const Input = styled.input`
   font-weight: 400;
   line-height: 150%;
   padding: 0 16px;
+  &:focus-visible {
+    outline: none !important;
+    outline-offset: 0;
+    border: 2px solid rgba(30, 33, 44, 1);
+    color: rgba(30, 33, 44, 1);
+}
 `;
 
 const SearchSvg = styled.div`
