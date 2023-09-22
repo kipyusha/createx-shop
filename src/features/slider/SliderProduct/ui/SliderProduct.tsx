@@ -28,7 +28,7 @@ const SliderProduct: FC<TSliderProductProps> = (props) => {
                   className={clsx("SliderSimple-Image", {
                     "SliderSimple-Image__mobile": isMobileScreen,
                   })}
-                  src={el.images}
+                  src={el.image}
                 />
                 <WrapRating>
                   <RatingComponents />

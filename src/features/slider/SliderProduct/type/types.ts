@@ -7,7 +7,7 @@ export type TSliderProductProps = {
 
 export interface ISliderProduct {
     id: number,
-    images: string,
+    image: string,
     title: string,
     price: number
 }

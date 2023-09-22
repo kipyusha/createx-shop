@@ -42,7 +42,6 @@ const BannerBlock = () => {
             <TitleSale>Get 5% Off & Free Delivery</TitleSale>
             <TitleEmail>Email</TitleEmail>
             <InputWrap>
-              
              <InputEmail placeholder="Your working email"/>
              <button>Subscribe</button>
             </InputWrap>
@@ -59,6 +58,7 @@ export default BannerBlock;
 const Container = styled.div`
   width: 1860px;
   margin: 0 auto;
+  margin-top: 160px;
 `;
 
 const Wrap = styled.div`

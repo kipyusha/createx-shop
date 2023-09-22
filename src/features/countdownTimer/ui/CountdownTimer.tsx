@@ -1,32 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { calculateTimeRemaining } from "../lib";
+  
 
-const formatNumberWithLeadingZero = (number: number) => {
-  return number < 10 ? `0${number}` : `${number}`;
-};
 const CountdownTimer: React.FC<{ targetDate: Date }> = ({ targetDate }) => {
-  const calculateTimeRemaining = () => {
-    const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    return `${formatNumberWithLeadingZero(days)} ${formatNumberWithLeadingZero(
-      hours
-    )} ${formatNumberWithLeadingZero(minutes)} ${formatNumberWithLeadingZero(
-      seconds
-    )}`;
-  };
   const [timeRemaining, setTimeRemaining] = useState<string>(
-    calculateTimeRemaining()
+    calculateTimeRemaining(targetDate)
   );
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeRemaining(calculateTimeRemaining());
+      setTimeRemaining(calculateTimeRemaining(targetDate));
     }, 1000);
     return () => clearInterval(interval);
   }, [targetDate]);
