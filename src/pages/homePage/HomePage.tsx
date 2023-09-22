@@ -7,6 +7,8 @@ import Header from '../../widgets/header/ui/Header'
 import SliderMain from '../../widgets/sliderMain'
 import SliderProductMain from '../../widgets/sliderProduct/ui/SliderProductMain'
 import CategoryCard from '../../widgets/category'
+import PopularCategory from '../../widgets/PopularCategory'
+
 
 const HomePage = () => {
   return (
@@ -17,6 +19,7 @@ const HomePage = () => {
         <CategoryCard/>
         <SliderProductMain/>
         <BannerBlock/>
+        <PopularCategory/>
         <Footer/>
     </Container>
   )
