@@ -6,7 +6,7 @@ import { SLIDER_IMAGES } from "../consts/data";
 const SliderMain = () => {
   return (
     <Container>
-      <SliderSimple arrows={true} images={SLIDER_IMAGES}/>
+      <SliderSimple arrows={true} images={SLIDER_IMAGES} autoplay= {true}/>
       <TitleTop>New collection</TitleTop>
       <TitleSeason>Menswear 2020</TitleSeason>
     </Container>

@@ -8,6 +8,8 @@ import SliderMain from '../../widgets/sliderMain'
 import SliderProductMain from '../../widgets/sliderProduct/ui/SliderProductMain'
 import CategoryCard from '../../widgets/category'
 import PopularCategory from '../../widgets/PopularCategory'
+import SliderTrend from '../../widgets/SliderTrend'
+import SliderSale from '../../widgets/SliderSale'
 
 
 const HomePage = () => {
@@ -20,6 +22,8 @@ const HomePage = () => {
         <SliderProductMain/>
         <BannerBlock/>
         <PopularCategory/>
+        <SliderTrend/>
+        <SliderSale/>
         <Footer/>
     </Container>
   )

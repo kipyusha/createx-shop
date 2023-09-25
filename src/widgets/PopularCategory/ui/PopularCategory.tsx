@@ -7,14 +7,14 @@ const PopularCategory = () => {
     <Container>
       <Title>Popular categories</Title>
       <Wrapper>
-      {POPULAR_CATEGORY_DATA.map((el) => {
-        return (
-          <Wrap key={el.id}>
-            <Img src={el.image} alt={el.title} />
-            <TitleCategory>{el.title}</TitleCategory>
-          </Wrap>
-        );
-      })}
+        {POPULAR_CATEGORY_DATA.map((el) => {
+          return (
+            <Wrap key={el.id}>
+              <Img src={el.image} alt={el.title} />
+              <TitleCategory>{el.title}</TitleCategory>
+            </Wrap>
+          );
+        })}
       </Wrapper>
     </Container>
   );
@@ -26,7 +26,7 @@ const Container = styled.div`
   width: 1230px;
   height: 360px;
   margin: 180px auto;
-  
+
   text-align: center;
 `;
 
@@ -39,11 +39,11 @@ const Title = styled.h1`
   line-height: 130%;
 `;
 
-const Wrapper = styled.div` 
-display: flex;
-margin-top: 60px;
-gap: 30px;
-`
+const Wrapper = styled.div`
+  display: flex;
+  margin-top: 60px;
+  gap: 30px;
+`;
 
 const Wrap = styled.div`
   width: 180px;
