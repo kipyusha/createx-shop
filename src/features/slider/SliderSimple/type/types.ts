@@ -4,5 +4,6 @@ export type TSliderSimpleProps = {
     nextArrow?: JSX.Element;
     prevArrow?: JSX.Element;
     slidesToShow?: number;
-    swipe?: boolean
+    swipe?: boolean;
+    autoplay?: boolean;
 }

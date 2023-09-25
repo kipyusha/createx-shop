@@ -12,6 +12,7 @@ export const SLIDER_SIMPLE_SETTINGS = (props: TSliderSimpleProps) => {
     prevArrow,
     slidesToShow = 1,
     swipe = false,
+    autoplay = false,
   } = props;
 
   return {
@@ -19,7 +20,7 @@ export const SLIDER_SIMPLE_SETTINGS = (props: TSliderSimpleProps) => {
       arrows,
       dots: true,
       swipe,
-      autoplay: true,
+      autoplay,
       autoplaySpeed: 3000,
       infinite: true,
       nextArrow: arrows ? (
