@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import Carousel from '../../features/carousel'
-import Category from '../../widgets/category'
-import Footer from '../../widgets/footer/Footer'
+import Carousel from '../../widgets/carousel'
+import BannerBlock from '../../widgets/bannerBlock'
 import Header from '../../widgets/header/ui/Header'
-
 import SliderMain from '../../widgets/sliderMain'
 import SliderProductMain from '../../widgets/sliderProduct/ui/SliderProductMain'
+import CategoryCard from '../../widgets/category'
+import PopularCategory from '../../widgets/PopularCategory'
+import SliderTrend from '../../widgets/SliderTrend'
+import SliderSale from '../../widgets/SliderSale'
+import Footer from '../../widgets/footer'
 
 
 const HomePage = () => {
@@ -15,8 +18,12 @@ const HomePage = () => {
         <Header/>
         <Carousel/>
         <SliderMain/>
-        <Category/>
+        <CategoryCard/>
         <SliderProductMain/>
+        <BannerBlock/>
+        <PopularCategory/>
+        <SliderTrend/>
+        <SliderSale/>
         <Footer/>
     </Container>
   )
@@ -27,8 +34,5 @@ export default HomePage
 const Container = styled.div`
   max-width: 1980px;
   width: 100%;
-  
-  height: 3000px;
-  
-  
+  height: max-content;
 `

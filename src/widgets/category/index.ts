@@ -1,1 +1,1 @@
-export {default} from './ui/Category'
+export {default} from './ui/CategoryCard'

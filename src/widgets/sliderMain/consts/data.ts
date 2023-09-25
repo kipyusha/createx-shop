@@ -4,6 +4,6 @@ import img3 from '../../../assets/svg/page/image.svg'
 import img4 from '../../../assets/svg/page/image.svg'
 
 
-export const sliderImages = [
+export const SLIDER_IMAGES = [
     img1, img2, img3, img4
 ]

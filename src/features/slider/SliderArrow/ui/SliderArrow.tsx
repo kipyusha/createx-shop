@@ -17,6 +17,7 @@ type IProps = {
   style?: CSSProperties;
   styles?: CSSProperties;
   type?: ESliderArrow;
+  fill?: string;
 };  
 
 export const SliderArrow: FC<IProps> = ({
@@ -27,6 +28,7 @@ export const SliderArrow: FC<IProps> = ({
   style,
   styles,
   type,
+  fill = 'rgba(66, 69, 81, 1)',
 }) => {
   const arrowRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -39,8 +41,12 @@ export const SliderArrow: FC<IProps> = ({
         "--slider-arrow-opacity",
         opacity.toString()
       );
+      arrowRef.current.style.setProperty(
+        "--slider-arrow-fill",
+        fill.toString()
+      );
     }
-  }, [backgroundColor, opacity]);
+  }, [backgroundColor, opacity, fill]);
   return (
     <div
       className={clsx("Slider-Arrow", className)}
@@ -54,8 +60,10 @@ export const SliderArrow: FC<IProps> = ({
           "Slider-ArrowButton__right": type === ESliderArrow.Next,
         })}
       >
-        <SVGArrow
+        <SVGArrow 
+          
           className="Slider-ArrowCustom"
+          
           type={type === ESliderArrow.Previous ? "ArrowLeft" : "ArrowRight"}
         />
       </div>

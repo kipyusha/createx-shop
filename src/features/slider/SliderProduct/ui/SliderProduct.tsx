@@ -9,8 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import SVGHeart from "../../../../assets/svg/SVGHeart";
-import { sliderProductImages } from "../../../../widgets/sliderProduct/consts/data";
-import RatingComponents from "../../../rating/RatingComponents";
+import { SLIDER_PRODUCT_IMAGES } from "../consts/data";
+import RatingComponents from "../../../rating/ui/RatingComponents";
 
 const SliderProduct: FC<TSliderProductProps> = (props) => {
   const settings = SLIDER_SIMPLE_SETTINGS(props).settings;
@@ -18,8 +18,8 @@ const SliderProduct: FC<TSliderProductProps> = (props) => {
 
   return (
     <StyledSliderProduct {...settings}>
-      {!isNil(sliderProductImages) &&
-        sliderProductImages.map((el) => {
+      {!isNil(SLIDER_PRODUCT_IMAGES) &&
+        SLIDER_PRODUCT_IMAGES.map((el) => {
           return (
             <div className="SliderSimple-Item" key={el.id}>
               <Wrap>
@@ -28,7 +28,7 @@ const SliderProduct: FC<TSliderProductProps> = (props) => {
                   className={clsx("SliderSimple-Image", {
                     "SliderSimple-Image__mobile": isMobileScreen,
                   })}
-                  src={el.images}
+                  src={el.image}
                 />
                 <WrapRating>
                   <RatingComponents />
@@ -60,7 +60,6 @@ const WrapRating = styled.div`
   right: 16px;
 `;
 const StyledSliderProduct = styled(Slider)`
-  margin: 0 30px;
   &.slick-slide img {
     width: 100%;
     max-width: 1980px;
